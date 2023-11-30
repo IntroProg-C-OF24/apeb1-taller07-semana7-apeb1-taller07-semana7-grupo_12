@@ -1,0 +1,24 @@
+package problema_1;
+
+import java.util.Scanner;
+
+public class problema_3 {
+
+    public static void main(String[] args) {
+        Scanner put = new Scanner(System.in);
+        int i = 1, trabd;
+        double costdia;
+        String teclado;
+        while (i <= 5) {
+            System.out.print("Ingrese los datos del primer empleado: ");
+            teclado = put.next();
+            System.out.print("Ingrese los dias trabajados: ");
+            trabd = put.nextInt();
+            System.out.print("Ingrese el costo del dia:");
+            costdia = put.nextDouble();
+            System.out.print("Total" + trabd * costdia);
+            i++;
+        }
+    }
+
+}
