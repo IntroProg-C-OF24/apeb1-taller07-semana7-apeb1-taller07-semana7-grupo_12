@@ -1,0 +1,35 @@
+package problema_1;
+import java.util.Scanner;
+public class problema_6 {
+    public static void main(String[] args) {
+                Scanner teclado = new Scanner(System.in);
+
+        // Definir arreglos para almacenar los datos de las ventas
+        String[] nombresClientes = new String[7];
+        double[] costosComputadoras = new double[7];
+        int[] tiposClientes = new int[7];
+        for (int i = 0; i < 7; i++) {
+            System.out.println("Ingrese los datos de la venta " + (i + 1));
+            System.out.print("Nombre del cliente: ");
+            nombresClientes[i] = teclado.nextLine();
+            System.out.print("Costo de la computadora:");
+            costosComputadoras[i] = teclado.nextDouble();
+            System.out.print("Tipo de cliente: ");
+            tiposClientes[i] = teclado.nextInt();
+            teclado.nextLine();
+        }
+        System.out.println("\nReporte de ventas:");
+        for (int i = 0; i < 7; i++) {
+            System.out.print("Cliente tipo " + tiposClientes[i] + ", compra computadora con precio" + costosComputadoras[i]);
+            double descuento = 0.0;
+            if (tiposClientes[i] == 1) {
+                descuento = 0.10;
+            } else if (tiposClientes[i] == 2) {
+                descuento = 0.20;
+            }
+            double precioConDescuento = costosComputadoras[i] * (1 - descuento);
+            System.out.println(", precio con descuento: $" + precioConDescuento);
+        }
+        teclado.close();
+    }
+}
