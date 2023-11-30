@@ -1,0 +1,13 @@
+package problema_1;
+import java.util.Scanner;
+public class Problema_1 {
+    public static void main(String[] args) {
+                int num=1,num1=10;
+        while (num<=6) {
+            System.out.println(num + "/" + num1);
+            num++;
+            num1++;
+        }
+    }
+    
+}
