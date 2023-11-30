@@ -1,0 +1,24 @@
+package problema_1;
+import java.util.Scanner;
+public class problema_5 {
+    public static void main(String[] args) {
+                Scanner teclado = new Scanner(System.in);
+        String[] nombres = new String[4];
+        double[] promedios = new double[4];
+        String[] total = new String[4];
+        for (int i = 0; i < 4; i++) {
+            System.out.print("Ingrese Nombre del Estudiante: " + (i + 1));
+            nombres[i] = teclado.nextLine();
+
+            System.out.print("Ingrese la nota promedio del ciclo: " + nombres[i]);
+            promedios[i] = teclado.nextDouble();
+            teclado.nextLine();
+            total[i] = (promedios[i] >= 6.0) ? "Aprobado" : "Reprobado";
+        }
+       for (int i = 0; i < 4; i++) {
+            System.out.println(nombres[i]+ promedios[i] + total[i]);
+        }
+        teclado.close();
+     }
+    
+}
