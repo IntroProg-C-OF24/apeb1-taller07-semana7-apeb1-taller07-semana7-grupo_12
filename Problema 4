@@ -1,0 +1,35 @@
+
+package problema_1;
+import java.util.Scanner;
+public class problema_4 {
+    public static void main(String[] args) {
+             Scanner teclado = new Scanner(System.in);
+        String Nombre;
+        String Posicion;
+        int cont, edad;
+        double altura;
+        double TotalEd, TotalAlt, promEd, promAlt;
+        String repetir = "r";
+        cont = 0;
+        TotalEd = 0;
+        TotalAlt = 0;
+        while (repetir.equals("r")) {
+            System.out.println("Ingrese los datos del Jugador");
+            Nombre = teclado.next();
+            Posicion = teclado.next();
+            altura = teclado.nextDouble();
+            edad = teclado.nextInt();
+            TotalEd = (TotalEd + edad);
+            TotalAlt = (TotalAlt + altura);
+            cont = cont + 1;
+            System.out.println("Jugador"+cont+Nombre+Posicion+edad + altura);
+            System.out.println("Ingresa mas jugadores?");
+            repetir = teclado.next();       
+        }
+        promEd = (TotalEd / cont);
+        System.out.println("Edad promedio: " + promEd);
+        promAlt = (TotalAlt / cont);
+        System.out.println("Altura promedio " + promAlt);
+    }
+    }
+    
